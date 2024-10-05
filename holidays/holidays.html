@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plan your holidays</title>
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+    
+  </head>
+<body>
+  <div class="waveWrapper waveAnimation">
+
+    <div class="waveWrapperInner bgTop">
+  
+      <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+  
+    </div>
+  
+    <div class="waveWrapperInner bgMiddle">
+  
+      <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+  
+    </div>
+  
+    <div class="waveWrapperInner bgBottom">
+  
+      <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+  
+    </div>
+  
+    <div class="waveWrapperInner bgMountain">
+  
+      <div class="wave waveMountain" style="background-image: url('resources/image/montain.png')"></div>
+  
+    </div>
+  
+    <div class="waveWrapperInner bgCity">
+  
+      <div class="wave waveCity" style="background-image: url('resources/image/city.png')"></div>
+  
+    </div>
+  
+  </div>
+  <div class="content">
+        <header>
+        <h1>Algorithm to help you find your dream holidays</h1>
+    </header>
+
+    <p>Is it a headache for you to organise your holidays? You find it 
+        so time consuming and draining that you would rather repeat a previous holiday
+        as an easy way out?
+    </p>
+    <h2>Look no further, the solution is on this website!</h2>
+    <p>Just answer few questions and you will find the perfect destination tailored to you. You are just
+      few clics away from finding the destination of your dreams.  
+    </p>
+    <h2>The quizz</h2>
+    <form id="form1">
+
+        <h2>What is your ideal weather?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="100" id="var_string" />The hotter the better</label>
+        <label for="var_join"><input type="radio" name="variable" value="200" id="var_join" />Not too hot nor to cold</label>
+        <label for="var_info"><input type="radio" name="variable" value="300" id="var_info" />As chill as can be</label>
+        
+        <h2>Which dreamplace is yours?</h2>
+        <label for="sub_string"><input type="radio" name="sub" value="10" id="sub_string"/>The beach</label>
+        <label for="sub_join"><input type="radio" name="sub" value="20" id="sub_join"/>The countryside</label>
+        <label for="sub_info"><input type="radio" name="sub" value="30" id="sub_info" />An old city</label>
+        
+        
+        <h2>What are you looking forward to do?</h2>
+        <label for="cat_string"><input type="radio" name="con" value="1" id="cat_string" />Partying</label>
+        <label for="cat_join"><input type="radio" name="con" value="2" id="cat_join" />Resting</label>
+        <label for="cat_info"><input type="radio" name="con" value="3" id="cat_info" />Exploring</label>
+        
+    
+        
+       <p><button type="submit" value="Submit">Submit</button></p>
+        
+        </form>
+        <p>Your dream holiday is in: <span id="grade2"></span></p>
+  </div>
+  <script>
+    document.getElementById("form1").onsubmit=function() {
+           variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+           sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+           con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+           
+    
+    
+           result = variable + sub + con;
+    
+        //document.getElementById("grade").innerHTML = result;
+
+        if (result == 111) {result2 = "Barcelone"};
+        if (result == 112) {result2 = "Zakynthos"};
+        if (result == 113) {result2 = "Tenerife"};
+        if (result == 121) {result2 = "Grenoble"};
+        if (result == 122) {result2 = "Thonons les Bains"};
+        if (result == 123) {result2 = "Gard"};
+        if (result == 131) {result2 = "Seville"};
+        if (result == 132) {result2 = "Avignon"};
+        if (result == 133) {result2 = "Grenade"};
+        if (result == 211) {result2 = "Split"};
+        if (result == 212) {result2 = "Karlobag"};
+        if (result == 213) {result2 = "Dubrovnic"};
+        if (result == 221) {result2 = "Brest"};
+        if (result == 222) {result2 = "Hanvec"};
+        if (result == 223) {result2 = "Guerande"};
+        if (result == 231) {result2 = "Paris"};
+        if (result == 232) {result2 = "Oxford"};
+        if (result == 233) {result2 = "Paris"};
+        if (result == 311) {result2 = "Edimburgh"};
+        if (result == 312) {result2 = "Hanvec"};
+        if (result == 313) {result2 = "Blackpool"};
+        if (result == 321) {result2 = "Glasgow"};
+        if (result == 322) {result2 = "Golloway Forest Park"};
+        if (result == 323) {result2 = "Cairngorms National Park"};
+        if (result == 331) {result2 = "Glasgow"};
+        if (result == 332) {result2 = "St Andrews"};
+        if (result == 333) {result2 = "Belfast"};
+document.getElementById("grade2").innerHTML = result2;
+    
+    
+    
+    return false; // required to not refresh the page; just leave this here
+    } //this ends the submit function
+    
+    </script>
+</body>
+</html>

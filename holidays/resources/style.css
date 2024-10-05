@@ -1,0 +1,333 @@
+@keyframes move_wave {
+
+    0% {
+  
+      transform: translateX(0) translateZ(0) scaleY(1)
+  
+    }
+  
+    50% {
+  
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  
+    }
+  
+    100% {
+  
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  
+    }
+  
+  }
+  
+  
+  
+  .waveWrapper {
+  
+    overflow: hidden;
+  
+    position: absolute;
+  
+    left: 0;
+  
+    right: 0;
+  
+    bottom: 0;
+  
+    top: 0;
+  
+    margin: auto;
+  
+  }
+  
+  
+  .waveWrapperInner {
+  
+    position: absolute;
+  
+    width: 100%;
+  
+    overflow: hidden;
+  
+    height: 100vh;
+  
+    bottom: -1px;
+  
+    background-image: linear-gradient(to top, #375386 20%, #27273c 80%);
+  
+  }
+  
+  
+  .bgTop {
+  
+    z-index: 15;
+  
+    opacity: 0.5;
+  
+  }
+  
+  
+  .bgMiddle {
+  
+    z-index: 10;
+  
+    opacity: 0.75;
+  
+  }
+  
+  
+  .bgBottom {
+  
+    z-index: 5;
+  
+  }
+  
+  
+  .bgMountain {
+  
+    z-index: 20;
+  
+    opacity: 0;
+  
+    background-image: url('image/montain.png');
+    
+    width: 100%;
+  
+    height: 100vh;
+  
+    background-size: 100% 100%;
+  
+  }
+  
+  
+  .bgCity {
+  
+    z-index: 25;
+  
+    opacity: 0;
+  
+    background-image: url('image/city.png');
+  
+    width: 100%;
+  
+    height: 100vh;
+  
+    background-size: 100% 100%;
+  
+  }
+  
+  
+  .wave {
+  
+    position: absolute;
+  
+    left: 0;
+  
+    width: 200%;
+  
+    height: 100%;
+  
+    background-repeat: repeat no-repeat;
+  
+    background-position: 0 bottom;
+  
+    transform-origin: center bottom;
+  
+  }
+  
+  
+  .waveTop {
+  
+    background-size: 50% 100px;
+  
+  }
+  
+  
+  .waveAnimation .waveTop {
+  
+    animation: move-wave 10s infinite linear;
+  
+    -webkit-animation: move-wave 10s infinite linear;
+  
+    animation-delay: 0s;
+  
+    -webkit-animation-delay: 0s;
+  
+  }
+  
+  
+  .waveMiddle {
+  
+    background-size: 50% 120px;
+  
+  }
+  
+  
+  .waveAnimation .waveMiddle {
+  
+    animation: move_wave 10s infinite linear;
+    -webkit-animation: move_wave 10s infinite linear;
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+  
+  }
+  
+  
+  .waveBottom {
+  
+    background-size: 50% 100px;
+  
+  }
+  
+  
+  .waveAnimation .waveBottom {
+  
+    animation: move_wave 10s infinite linear;
+    -webkit-animation: move_wave 10s infinite linear;
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+  
+  }
+  
+  
+  .waveMountain {
+  
+    background-size: cover;
+    opacity: 0;
+  
+  }
+  
+  
+  .waveCity {
+  
+    background-size: cover;
+    opacity: 0;
+  
+  }
+  
+  
+  .waveAnimation .bgMountain {
+  
+    animation: mountain-animation 20s infinite linear;
+  
+    -webkit-animation: mountain-animation 20s infinite linear;
+  
+  }
+  
+  
+  .waveAnimation .bgCity {
+  
+    animation: city-animation 20s infinite linear;
+  
+    -webkit-animation: city-animation 20s infinite linear;
+  
+  }
+  
+  
+  @keyframes mountain-animation {
+  
+    0% {
+  
+      opacity: 0;
+  
+    }
+  
+    50% { /* 10s delay + 6s animation duration */
+  
+      opacity: 0;
+  
+    }
+  
+    51% {
+  
+      opacity: 1;
+  
+    }
+    75% {
+  
+        opacity: 1;
+    
+      }
+  
+    76% {
+  
+      opacity: 0;
+  
+    }
+  
+    100% {
+  
+      opacity: 0;
+  
+    }
+  
+  }
+  
+  
+  @keyframes city-animation {
+  
+    0% {
+  
+      opacity: 0;
+  
+    }
+  
+    73% { /* 15s delay + 5s animation duration */
+  
+      opacity: 0;
+  
+    }
+  
+    74% {
+  
+      opacity: 1;
+  
+    }
+  
+    93.75% {
+  
+      opacity: 1;
+  
+    }
+  
+    100% {
+  
+      opacity: 0;
+  
+    }
+  
+  }
+  .content {
+  
+    position: absolute;
+  
+    top: 50%;
+  
+    left: 50%;
+  
+    transform: translate(-50%, -50%);
+  
+    z-index: 30; /* make sure it's on top of the animation */
+  
+    text-align: left;
+  
+    color: #bb2222; /* adjust the color to your liking */
+  
+  }
+  
+  
+  .content h1 {
+  
+    font-size: 36px;
+  
+  
+  }
+  
+  
+  .content p {
+  
+    font-size: 18px;
+  
+  
+  }
+
